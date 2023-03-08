@@ -1,0 +1,143 @@
+body {
+  background-color: # b18ac1;
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul .content {
+  padding: 10px;
+  font-size: 8px;
+}
+
+ul .content li {
+  color: whitesmoke;
+  font-stretch: extra-condensed;
+}
+
+.pic {
+  border-color: white;
+  border-style: double;
+}
+
+.timeline {
+  width: 8px;
+  padding-left: 24px;
+  background-color: rgba(144, 179, 159, 0.85);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255,255,255,0.7) solid;
+  border-bottom: 2px rgba(40,40,40,0.35) solid;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border-right: 2px rgba(40,40,40,0.35) solid;
+  backdrop-filter: blur(5px);
+  padding-top: 24px;
+}
+
+.dialog_wrapper {
+  height: 160px;
+  position: relative;
+  transform: translateY(0px);
+}
+.dialog_wrapper:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: solid 5px white;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-120%);
+}
+.dialog_wrapper:nth-child(2n+1) {
+  transition-origin: 0% 20px;
+}
+.dialog_wrapper:nth-child(2n+1) .dialog {
+  left: 15px;
+}
+.dialog_wrapper:nth-child(2n+1) .dialog:before {
+  left: -15px;
+}
+.dialog_wrapper:nth-child(2n) {
+  transition-origin: 100% 20px;
+}
+.dialog_wrapper:nth-child(2n) .dialog {
+  right: 40px;
+  left: initial;
+}
+
+.dialog {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: rgba(144, 179, 159, 0.85);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255,255,255,0.7) solid;
+  border-bottom: 2px rgba(40,40,40,0.35) solid;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border-right: 2px rgba(40,40,40,0.35) solid;
+  backdrop-filter: blur(5px);
+  width: 150px;
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+.dialog:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  right: -15px;
+  border-style: solid;
+  border-width: 50px 0 50px 100px;
+  background-color: #9bbbaa;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 10px rgba(255,255,255,0.7) solid;
+  border-bottom: 2px rgba(40,40,40,0.35) solid;
+  backdrop-filter: blur(5px);
+  border-right: 2px rgba(40,40,40,0.35) solid;
+  backdrop-filter: blur(15px);
+  transform: rotate(0deg);
+}
+.dialog:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px #78dfdd;
+}
+
+.year {
+  font-size: 14px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(99, 99, 99), 0 0 15px rgb(228, 27, 255), 0 0 4px rgb(224 102 53);
+  font-weight: bolder;
+}
+
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url(m_banner.jpg) no-repeat center center fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+@media (min-width: 1000px) {
+    .banner {
+      width: 100%;
+      height: 100vh;
+      background: url(banner.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: contain;
+    }
+}
